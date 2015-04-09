@@ -10,7 +10,7 @@ type entrant =
 type race = 
     { entrant : entrant
       times : seq<TimeSpan> }
-
+      
 type cleanRead = 
     { bib : int
       checkpoint : int
@@ -57,11 +57,9 @@ let main argv =
     | args when args.Length = 2 -> generate (Convert.ToInt32(args.[1])) (Convert.ToInt32(args.[0]))
     | args when args.Length = 1 -> generateSimple (Convert.ToInt32(args.[0]))
     | _ -> 
-        printfn "usage: (# of entrants) (# of checkpoints) [-w (file)]"
+        printfn "usage: (# of entrants) (# of checkpoints)"
         printfn "\t #1: (required) positional number of entrants"
         printfn "\t #2: (required) positional number of checkpoints"
-        printfn "\t -t: [optional] print timing info"
-        printfn "\t -w: [optional] write to file"
         printfn "expected: #entrants #checkpoints"
         Seq.empty<cleanRead>
     |> Seq.sortBy (fun f -> f.time)

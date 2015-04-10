@@ -8,6 +8,7 @@ type entrant =
     { id : int
       mph : float 
       gender: string
+      startAt: TimeSpan
       age: int}
 
 type race = 
@@ -28,6 +29,7 @@ let anHour = 60.0
 let toEntrant n = 
     let rnd = new Random(n)
     { id = n
+      startAt = (rnd.NextDouble() * 5.0) + (rnd.NextDouble() * 5.0) |> TimeSpan.FromMinutes
       mph = float (rnd.Next(2, 10)) + (rnd.NextDouble() * 2.0 - 1.0) 
       age = rnd.Next(10,70)
       gender = match rnd.NextDouble() with
@@ -43,6 +45,7 @@ let toRace checkpoints e =
                 yield float (i) * ((anHour / e.mph) + ((rnd.NextDouble() * aQuarter) - anEighth))
         }
         |> Seq.map TimeSpan.FromMinutes
+        |> Seq.map (fun ct -> ct + e.startAt)
     { entrant = e
       times = times }
 

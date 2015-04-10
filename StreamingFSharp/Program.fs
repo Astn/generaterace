@@ -20,17 +20,16 @@ let groupReads (reads:IObservable<chipRead.Root>) =
     let overall = reads 
                     |> Observable.groupBy (fun item -> item.Checkpoint)
                     |> Observable.bind (fun group -> group 
-                                                        |> Observable.take 8
                                                         |> Observable.map (fun item-> (sprintf "Overall Checkpoint %i" group.Key ,item)))
     let overallGender = reads 
                             |> Observable.groupBy (fun item -> (item.Checkpoint,item.Gender))
                             |> Observable.bind (fun group -> group
-                                                                |> Observable.take 8
-                                                                |> Observable.map (fun item-> (sprintf "%s Checkpoint %i" (snd group.Key) (fst group.Key) ,item)))
+                                                                |> Observable.map (fun item-> 
+                                                                let checkpoint, gender = group.Key
+                                                                (sprintf "%s Checkpoint %i" gender checkpoint ,item)))
     let genderAge = reads 
                         |> Observable.groupBy (fun item -> (item.Checkpoint, item.Gender, (item.Age+2)/5))
                         |> Observable.bind (fun group -> group 
-                                                            |> Observable.take 8
                                                             |> Observable.map (fun item-> 
                                                             let chk, gender, ageGroup = group.Key
                                                             let ageRange = sprintf "%i-%i" (ageGroup * 5 - 2) ((ageGroup + 1) * 5 - 2)
@@ -44,12 +43,11 @@ let stream fileLocation =
         printfn "the file [%A] does not exist" fileLocation
         1
     else
-        printfn "loading %A" fileLocation
+        // printfn "loading %A" fileLocation
 
         let reads = loadFileLines fileLocation
                     |> Seq.map chipRead.Parse
                     |> Observable.ofSeqOn TaskPoolScheduler.Default
-                    |> Observable.delay (TimeSpan.FromMilliseconds(100.0))
                     |> Observable.publish
                     |> Observable.refCount
 

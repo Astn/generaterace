@@ -37,6 +37,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Release\GenerateRace.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
+    <StartArguments>10000 5 &gt; race.json</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

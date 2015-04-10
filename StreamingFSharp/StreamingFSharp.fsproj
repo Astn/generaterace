@@ -36,7 +36,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Release\StreamingFSharp.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
-    <StartArguments>"C:\git\GenerateRace\GenerateRace\bin\Release\race50kx10-2.json"</StartArguments>
+    <StartArguments>"C:\git\GenerateRace\GenerateRace\bin\Release\race.json"</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

@@ -17,13 +17,8 @@ let streamReaderUnfold (sr:StreamReader) =
         | str when str.Length = 1 && Char.IsControl(str.[0]) -> sr.Dispose(); None
         | str -> Some(str,sr)
 
-let loadFileLines (path:string) =
-     path
-     |> (fun stdIn -> new StreamReader(stdIn))
-     |> Seq.unfold streamReaderUnfold
-
-let loadStdInLines =
-    Console.OpenStandardInput()
+let loadLines (stream:Stream)=
+    stream
     |> (fun stdIn -> new StreamReader(stdIn))
     |> Seq.unfold streamReaderUnfold
 
@@ -66,19 +61,18 @@ let stream input =
 [<EntryPoint>]
 let main argv = 
 
-    let output = 
-            match argv with
-            | args when args.Length = 1 -> loadFileLines args.[0]
-            | _ -> loadStdInLines
-            
+    let input = if argv.Length = 1 then File.OpenRead argv.[0] :> Stream
+                else Console.OpenStandardInput() 
+
+    let lines = loadLines input            
     let mre = new ManualResetEvent(false)
-    let printer = output
-                |> stream
-                |> Observable.timeoutSpan (TimeSpan.FromMilliseconds 3000.0)
-                |> Observable.map (fun (group,item) -> {groupName=group; bib=item.Bib; time= item.Time.TimeOfDay; age= item.Age;}  )
-                |> Observable.subscribeWithCallbacks  (fun item -> printfn "%s" <| JsonConvert.SerializeObject item ) 
-                                                      (fun err -> printfn "Error: %A" err)
-                                                      (fun () -> mre.Set() |> ignore)
+    let printer = lines
+                    |> stream
+                    |> Observable.timeoutSpan (TimeSpan.FromMilliseconds 3000.0)
+                    |> Observable.map (fun (group,item) -> {groupName=group; bib=item.Bib; time= item.Time.TimeOfDay; age= item.Age;}  )
+                    |> Observable.subscribeWithCallbacks  (fun item -> printfn "%s" <| JsonConvert.SerializeObject item ) 
+                                                          (fun err -> printfn "Error: %A" err)
+                                                          (fun () -> mre.Set() |> ignore)
     
     mre.WaitOne() |> ignore
     printer.Dispose()

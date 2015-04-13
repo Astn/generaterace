@@ -6,16 +6,12 @@ var fs = require('fs');
 var Rx = require('rx-lite');
 Rx.Node = require('rx-node');
 var lazy = require('lazy');
-/*
-process.argv.forEach(function(val, index) {
-    console.log(index + " : " + val);
-});
-*/
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
+var fixNewLine = new RegExp("(\r)?\n");
 function getInput() {
-    if (process.argv > 2) {
+    if (process.argv.length > 2) {
         return Rx.Observable.fromEvent(fileinput.input(), 'line').map(function (line) {
             return line.toString('utf8');
         }).map(function (line) {
@@ -37,9 +33,8 @@ function getInput() {
         });
     }
 }
-var fixNewLine = new RegExp("(\r)?\n");
 function main() {
-    var subscription = getInput().take(100).subscribe(function (x) {
+    var subscription = getInput().take(1000).subscribe(function (x) {
         console.log(x);
     });
 }

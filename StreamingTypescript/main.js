@@ -3,9 +3,8 @@
  */
 var fileinput = require('fileinput');
 var fs = require('fs');
-var Rx = require('rx-lite');
+var Rx = require('rx');
 Rx.Node = require('rx-node');
-var lazy = require('lazy');
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
@@ -33,9 +32,55 @@ function getInput() {
         });
     }
 }
+function groupReads(reads) {
+    var overall = reads.groupBy(function (item) {
+        return item.checkpoint;
+    }).selectMany(function (group) {
+        return group.map(function (item) {
+            return { "name": "Overall Checkpoint " + group.key, "item": item };
+        });
+    });
+    var gender = reads.groupBy(function (item) {
+        return { "checkpoint": item.checkpoint, "gender": item.gender };
+    }, function (e) {
+        return e;
+    }, function (groupA, groupB) {
+        return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender;
+    }).selectMany(function (group) {
+        return group.map(function (item) {
+            return { "name": group.key.gender + " Checkpoint " + group.key.checkpoint, "item": item };
+        });
+    });
+    var genderAge = reads.groupBy(function (item) {
+        return { "checkpoint": item.checkpoint, "gender": item.gender, "age": item.age };
+    }, function (e) {
+        return e;
+    }, function (groupA, groupB) {
+        return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender && groupA.age === groupB.age;
+    }).selectMany(function (group) {
+        return group.map(function (item) {
+            return { "name": group.key.gender + " " + group.key.age + " Checkpoint " + group.key.checkpoint, "item": item };
+        });
+    });
+    return overall.merge(gender).merge(genderAge);
+}
+function stream(lines) {
+    var reads = lines.select(function (x) {
+        return JSON.parse(x);
+    }).publish().refCount();
+    return groupReads(reads).map(function (item) {
+        return {
+            "groupName": item.name,
+            "bib": item.item.bib,
+            "time": item.item.time,
+            "age": item.item.age
+        };
+    });
+}
 function main() {
-    var subscription = getInput().take(1000).subscribe(function (x) {
-        console.log(x);
+    var lines = getInput();
+    var subscription = stream(lines).take(10).subscribe(function (x) {
+        console.write(JSON.stringify(x));
     });
 }
 main();

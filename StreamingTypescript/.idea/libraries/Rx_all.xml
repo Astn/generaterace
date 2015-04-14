@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Rx.all" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="node_modules" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/node_modules/rx/ts/rx.all.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/node_modules/rx/ts/rx.all.d.ts" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

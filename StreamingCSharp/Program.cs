@@ -66,7 +66,7 @@ namespace StreamingCSharp
                                                     .Select(item=> {
                                                         var checkpoint = group.Key.Item1;
                                                         var gender = group.Key.Item2;
-                                                        return Tuple.Create(string.Format("{0} Overall Checkpoint {1}",gender,checkpoint),item);
+                                                        return Tuple.Create(string.Format("{0} Checkpoint {1}",gender,checkpoint),item);
                                                     }));
             var genderAgeGroup = reads
                             .GroupBy( item => Tuple.Create(item.checkpoint,item.gender, (item.age+2)/5))

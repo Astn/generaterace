@@ -29,6 +29,8 @@ function getInput() {
             }, "");
         }).filter(function (item) {
             return item[0] === "{";
+        }).selectMany(function (line) {
+            return line.split(/\r\n/);
         });
     }
 }
@@ -66,7 +68,16 @@ function groupReads(reads) {
 }
 function stream(lines) {
     var reads = lines.select(function (x) {
-        return JSON.parse(x);
+        var res = null;
+        try {
+            res = JSON.parse(x);
+        }
+        catch (e) {
+            process.stdout.write(x);
+            console.log(e);
+            throw e;
+        }
+        return res;
     }).publish().refCount();
     return groupReads(reads).map(function (item) {
         return {

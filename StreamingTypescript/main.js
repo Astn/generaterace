@@ -5,10 +5,38 @@ var fileinput = require('fileinput');
 var fs = require('fs');
 var Rx = require('rx');
 Rx.Node = require('rx-node');
+;
+;
+var fixNewLine = new RegExp("(\r)?\n");
+function toOutputType(item) {
+    return {
+        "groupName": item.name,
+        "bib": item.item.bib,
+        "time": item.item.time,
+        "age": item.item.age
+    };
+}
+function itemIdentity(e) {
+    return e;
+}
+function byCheckpoint(item) {
+    return item.checkpoint;
+}
+function byCheckpointGender(item) {
+    return { "checkpoint": item.checkpoint, "gender": item.gender };
+}
+function byCheckpointGenderAge(item) {
+    return { "checkpoint": item.checkpoint, "gender": item.gender, "age": item.age };
+}
+function compareByCheckpointGender(groupA, groupB) {
+    return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender;
+}
+function compareByCheckpointGenderAge(groupA, groupB) {
+    return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender && groupA.age === groupB.age;
+}
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
-var fixNewLine = new RegExp("(\r)?\n");
 function getInput() {
     if (process.argv.length > 2) {
         return Rx.Observable.fromEvent(fileinput.input(), 'line').map(function (line) {
@@ -19,7 +47,7 @@ function getInput() {
     }
     else {
         return Rx.Node.fromReadableStream(process.stdin).selectMany(function (line) {
-            return line.toString().split(/\r\n/);
+            return line.toString().split(/(\r)?\n/);
         }).windowWithCount(2, 1).selectMany(function (l) {
             return l.reduce(function (acc, x) {
                 if (endsWith(acc, "}") === true)
@@ -29,68 +57,40 @@ function getInput() {
             }, "");
         }).filter(function (item) {
             return item[0] === "{";
-        }).selectMany(function (line) {
-            return line.split(/\r\n/);
         });
     }
 }
 function groupReads(reads) {
-    var overall = reads.groupBy(function (item) {
-        return item.checkpoint;
-    }).selectMany(function (group) {
+    var overall = reads.groupBy(byCheckpoint).selectMany(function (group) {
         return group.map(function (item) {
             return { "name": "Overall Checkpoint " + group.key, "item": item };
         });
     });
-    var gender = reads.groupBy(function (item) {
-        return { "checkpoint": item.checkpoint, "gender": item.gender };
-    }, function (e) {
-        return e;
-    }, function (groupA, groupB) {
-        return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender;
-    }).selectMany(function (group) {
+    var gender = reads.groupBy(byCheckpointGender, itemIdentity, compareByCheckpointGender).selectMany(function (group) {
         return group.map(function (item) {
             return { "name": group.key.gender + " Checkpoint " + group.key.checkpoint, "item": item };
         });
     });
-    var genderAge = reads.groupBy(function (item) {
-        return { "checkpoint": item.checkpoint, "gender": item.gender, "age": item.age };
-    }, function (e) {
-        return e;
-    }, function (groupA, groupB) {
-        return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender && groupA.age === groupB.age;
-    }).selectMany(function (group) {
+    var genderAge = reads.groupBy(byCheckpointGenderAge, itemIdentity, compareByCheckpointGenderAge).selectMany(function (group) {
         return group.map(function (item) {
-            return { "name": group.key.gender + " " + group.key.age + " Checkpoint " + group.key.checkpoint, "item": item };
+            return {
+                "name": group.key.gender + " " + group.key.age + " Checkpoint " + group.key.checkpoint,
+                "item": item
+            };
         });
     });
     return overall.merge(gender).merge(genderAge);
 }
+function toReadType(line) {
+    return JSON.parse(line);
+}
 function stream(lines) {
-    var reads = lines.select(function (x) {
-        var res = null;
-        try {
-            res = JSON.parse(x);
-        }
-        catch (e) {
-            process.stdout.write(x);
-            console.log(e);
-            throw e;
-        }
-        return res;
-    }).publish().refCount();
-    return groupReads(reads).map(function (item) {
-        return {
-            "groupName": item.name,
-            "bib": item.item.bib,
-            "time": item.item.time,
-            "age": item.item.age
-        };
-    });
+    var reads = lines.map(toReadType).publish().refCount();
+    return groupReads(reads).map(toOutputType);
 }
 function main() {
     var lines = getInput();
-    var subscription = stream(lines).take(1000).subscribe(function (x) {
+    var subscription = stream(lines).subscribe(function (x) {
         process.stdout.write(JSON.stringify(x) + '\n');
     });
 }

@@ -35,3 +35,7 @@ usage:
 usage:
 
 .\GenerateRace\bin\Release\GenerateRace.exe 5000 5 | .\StreamingCSharp\bin\Release\StreamingCSharp.exe
+
+usage:
+
+.\GenerateRace\bin\Release\GenerateRace.exe 5000 5 | python .\StreamingPython\main.py

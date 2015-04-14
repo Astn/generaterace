@@ -2,444 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad08d6d4-ed8c-4d12-a0ed-9d8b58bd1bb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/logos/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/.coveralls.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/.jamignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/.jscsrc.todo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Rx_all.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_elementatordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_extremaby.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_findvalue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_firstonly.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_firstordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_lastordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_observabletimerdate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_observabletimerdateandperiod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_observabletimertimespan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_observabletimertimespanandperiod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/_singleordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/abstractobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/joins/activeplan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/aggregate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/aggregatesheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/amb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/ambproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/and.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/anonymousobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/anonymousobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/subjects/anonymoussubject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/asobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/asyncheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/asyncintro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/subjects/asyncsubject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/authors.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/autodetachobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/average.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/backpressureheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/basicheader-compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/basicheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/subjects/behaviorsubject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/bindcallback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/bindingheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/disposables/booleandisposable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/buffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/bufferwithcount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/bufferwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/bufferwithtimeorcount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/case.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/catch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/catchproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/catchscheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/checkedobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/coincidenceheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/coldobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/combinedsynchronized.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/combinelatest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/combinelatest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/combinelatestproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/expressions/compiler.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/disposables/compositedisposable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/concat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/concatall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/concatmap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/concatmapobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/concatproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/connectableobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/backpressure/controlled.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/count.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/create.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/currentthreadscheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/debouncewithselector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/defaultifempty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/defaultscheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/defer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/delay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/delaysubscription.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/delaywithselector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/dematerialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/deprecate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/dictionary.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/disposables/disposable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/distinct.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/distinctuntilchanged.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/distinctuntilchanged.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/do.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/dontenums.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/dowhile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/elementat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/elementatordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/empty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/empty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/enumerable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/enumerator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/enumeratorheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/errors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/every.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/exclusive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/exclusivemap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/experimentalheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/exports.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/finally.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/find.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/findindex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/first.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/firstordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/flatmapwithconcurrencylimit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/for.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/forkjoin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/forkjoinproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/from.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/from.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/fromarray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/fromarray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/fromarrayobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/fromcallback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/fromevent-modern.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/fromevent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/fromeventpattern.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/fromnodecallback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/frompromise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/generate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/generatewithabsolutetime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/generatewithrelativetime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/groupby.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/groupbyuntil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/groupedobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/groupjoin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/historicalscheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/hotobservable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/if.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/ignoreelements.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/immediatescheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/includes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/indexof.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/subjects/innersubscription.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/interval.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/intro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/isempty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/isequal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/join.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/joins/joinobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/joinpatternsheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/jortsort.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/jortsortuntil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/just.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/last.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/lastordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/let.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/license.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/liteextrasheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/liteheader-compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/liteheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/liteintro-compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/liteintro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/litetestintro-compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/litetestintro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/longstacktraces/longstackbegin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/longstacktraces/longstackend.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/longstacktraces/longstacktraces.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/manyselect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/materialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/max.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/maxby.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/merge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/mergeall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/mergeall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/mergedelayerror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/mergeproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/mergeproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/minby.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/mockdisposable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/mockobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/mockpromise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/multicast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/never.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/never.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/notification.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/observable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/observablebase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/observeon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/observeonobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/observer-extras.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/observer-lite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/observer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/of.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/of.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/ofarraychanges.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/ofobjectchanges.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/onerrorresumenext.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/onerrorresumenextproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/outro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/pairs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/pairs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/pairwise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/partition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/joins/pattern.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/backpressure/pausable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/backpressure/pausablebuffered.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/backpressure/pauser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/pipe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/joins/plan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/pluck.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/polyfills.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/priorityqueue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/publish.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/publishlast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/publishvalue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/range.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/range.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/reactivetest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/recorded.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/reduce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/reduce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/disposables/refcountdisposable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/repeat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/repeat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/repeatproto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/replay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/subjects/replaysubject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/retry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/retrywhen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/return.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx-lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.aggregates.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.aggregates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.aggregates.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.aggregates.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.all.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.all.compat.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.all.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.all.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.all.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.async-lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.async-tests.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.async.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.async.compat.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.async.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.async.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.async.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.async.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.async.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.backpressure-lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.backpressure-tests.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.backpressure.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.backpressure.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.backpressure.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.backpressure.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.binding-lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.binding.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.binding.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.binding.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.binding.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.coincidence-lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.coincidence.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.coincidence.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.coincidence.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.coincidence.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.compat.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.experimental.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.experimental.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.experimental.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.experimental.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.joinpatterns.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.joinpatterns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.joinpatterns.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.joinpatterns.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.compat.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.extras.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.extras.compat.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.extras.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.extras.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.extras.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.extras.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.lite.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.sorting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.sorting.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.sorting.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.testing.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.testing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.testing.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.testing.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.time-lite.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.time.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.time.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.time.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.time.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/ts/rx.virtualtime.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.virtualtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.virtualtime.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/dist/rx.virtualtime.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/scan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/scan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/disposables/scheduleddisposable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/scheduleditem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/scheduledobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/scheduleperiodicrecursive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/scheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/scheduler.periodic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/scheduler.recursive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/scheduler.wrappers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/selectmany.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/selectmanyobserver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/selectswitch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/sequenceequal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/share.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/sharereplay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/sharevalue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/single.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/singleinstance.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/singleordefault.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skiplast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skiplastwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skipuntil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skipuntilwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skipwhile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/skipwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/some.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/sortingheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/spawn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/start.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/startasync.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/startwith.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/backpressure/stopandwait.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/subintro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/subjects/subject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/suboutro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/subscribeon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/subscription.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/sum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/take.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takelast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takelastbuffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takelastbufferwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takelastwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takeuntil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takeuntilwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takewhile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/takewithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/tap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/testheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/testintro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/testing/testscheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/thendo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/throttlefirst.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/throw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/throw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/timeheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/timeinterval.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/timeout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/timeoutwithselector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/timer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/timestamp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/toarray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/perf/operators/toarray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/toasync.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/tomap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/topromise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/toset.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/transduce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/trycatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/using.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/internal/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/headers/virtualtimeheader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/concurrency/virtualtimescheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/when.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/where.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/enumerable/while.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/while.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/window.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/backpressure/windowed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/windowwithcount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/windowwithtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/windowwithtimeorcount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/withlatestfrom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/zip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/ziparray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rx/src/core/linq/observable/zipproto.js" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\lazy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\bucket.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\complex.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\custom.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\em.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\filter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\foldr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\forEach.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\head.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\join.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\lines.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\map.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\pipe.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\product.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\range.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\skip.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\sum.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\tail.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\take.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\lazy\test\takeWhile.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\rx-lite-dts\rx-lite.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\rx-lite\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\rx-lite\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\rx-lite\rx.lite.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\rx-lite\rx.lite.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\node_modules\rx-lite\rx.lite.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\one.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\GenerateRace\StreamingTypescript\two.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StreamingTypescript.iml" afterPath="$PROJECT_DIR$/.idea/StreamingTypescript.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js.map" afterPath="$PROJECT_DIR$/main.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.ts" afterPath="$PROJECT_DIR$/main.ts" />
@@ -469,8 +31,8 @@
           <file leaf-file-name="main.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.2302631">
-                  <caret line="109" column="47" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.40350878">
+                  <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#44#0" expanded="false" />
                   </folding>
@@ -485,8 +47,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.9879386">
-                  <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.55263156">
+                  <caret line="68" column="29" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -515,8 +77,8 @@
         <option value="$PROJECT_DIR$/node_modules/node-fileinput/fileinput.js" />
         <option value="$PROJECT_DIR$/node_modules/FileInput/index.js" />
         <option value="$PROJECT_DIR$/node_modules/FileInput/package.json" />
-        <option value="$PROJECT_DIR$/main.ts" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/main.ts" />
       </list>
     </option>
   </component>
@@ -579,50 +141,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="StreamingTypescript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StreamingTypescript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StreamingTypescript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rx-node" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StreamingTypescript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StreamingTypescript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rx-node" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rx" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -733,9 +251,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1429" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11367188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11367188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20227273" sideWeight="0.49277458" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5104167" order="11" side_tool="true" content_ui="tabs" />
@@ -945,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2302631">
-          <caret line="109" column="47" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.40350878">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
           </folding>
@@ -955,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9879386">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.55263156">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="29" />
           <folding />
         </state>
       </provider>

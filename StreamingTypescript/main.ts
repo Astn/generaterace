@@ -106,8 +106,8 @@ function main(){
     var lines = getInput();
 
     var subscription = stream(lines)
-        .take(10)
-        .subscribe(function (x) { console.write(JSON.stringify(x)); });
+        .take(1000)
+        .subscribe(function (x) { process.stdout.write(JSON.stringify(x)+'\n'); });
 }
 
 

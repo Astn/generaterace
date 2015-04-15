@@ -1,0 +1,11 @@
+﻿{
+  "name": "streaming-typescript",
+  "description": "Streaming Typescript",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "fileinput": "0.2.x",
+    "rx": "2.5.x",
+    "rx-node": "1.x"
+  }
+}

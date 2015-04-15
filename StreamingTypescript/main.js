@@ -1,21 +1,51 @@
+/// <reference path="typings/tsd.d.ts" />
 /**
- * Created by msdn_000 on 4/13/2015.
- */
+* Created by msdn_000 on 4/13/2015.
+*/
 var fileinput = require('fileinput');
 var fs = require('fs');
-var Rx = require('rx');
-Rx.Node = require('rx-node');
-;
-;
+var Rx1 = require('rx');
+Rx1.Node = require('rx-node');
+
 var fixNewLine = new RegExp("(\r)?\n");
+
+var SimpleRead = (function () {
+    function SimpleRead(bib, checkpoint, gender, age, time) {
+        this.bib = bib;
+        this.checkpoint = checkpoint;
+        this.gender = gender;
+        this.age = age;
+        this.time = time;
+    }
+    return SimpleRead;
+})();
+
+var GroupedRead = (function () {
+    function GroupedRead(name, item) {
+        this.name = name;
+        this.item = item;
+    }
+    return GroupedRead;
+})();
+
+var GroupedOutput = (function () {
+    function GroupedOutput(groupName, bib, time, age) {
+        this.groupName = groupName;
+        this.bib = bib;
+        this.time = time;
+        this.age = age;
+    }
+    return GroupedOutput;
+})();
+
 function toOutputType(item) {
-    return {
-        "groupName": item.name,
-        "bib": item.item.bib,
-        "time": item.item.time,
-        "age": item.item.age
-    };
+    return new GroupedOutput(item.name, item.item.bib, item.item.time, item.item.age);
 }
+
+function ageRange(item) {
+    return (item.age * 5 - 2) + "-" + ((item.age + 1) * 5 - 2);
+}
+
 function itemIdentity(e) {
     return e;
 }
@@ -26,8 +56,9 @@ function byCheckpointGender(item) {
     return { "checkpoint": item.checkpoint, "gender": item.gender };
 }
 function byCheckpointGenderAge(item) {
-    return { "checkpoint": item.checkpoint, "gender": item.gender, "age": item.age };
+    return { "checkpoint": item.checkpoint, "gender": item.gender, "age": Math.floor((item.age + 2) / 5) };
 }
+
 function compareByCheckpointGender(groupA, groupB) {
     return groupA.checkpoint === groupB.checkpoint && groupA.gender === groupB.gender;
 }
@@ -37,62 +68,77 @@ function compareByCheckpointGenderAge(groupA, groupB) {
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
+
 function getInput() {
     if (process.argv.length > 2) {
-        return Rx.Observable.fromEvent(fileinput.input(), 'line').map(function (line) {
-            return line.toString('utf8');
-        }).map(function (line) {
-            return line.replace(fixNewLine, "");
+        var input = fileinput.input();
+        var observable = Rx1.Observable.fromEvent(input, 'line');
+        var map = observable.map(function (line) {
+            return line.toString().replace(fixNewLine, "");
         });
-    }
-    else {
-        return Rx.Node.fromReadableStream(process.stdin).selectMany(function (line) {
-            return line.toString().split(/(\r)?\n/);
+        return map;
+    } else {
+        return Rx1.Node.fromReadableStream(process.stdin).selectMany(function (line) {
+            return line.toString().split(fixNewLine);
         }).windowWithCount(2, 1).selectMany(function (l) {
             return l.reduce(function (acc, x) {
-                if (endsWith(acc, "}") === true)
+                if (endsWith(acc, "}"))
                     return acc;
                 else
                     return acc + x;
             }, "");
         }).filter(function (item) {
-            return item[0] === "{";
+            return (item[0] === "{");
         });
     }
 }
+
 function groupReads(reads) {
     var overall = reads.groupBy(byCheckpoint).selectMany(function (group) {
         return group.map(function (item) {
-            return { "name": "Overall Checkpoint " + group.key, "item": item };
+            var impl = new GroupedRead("Overall Checkpoint " + group.key, item);
+            return impl;
         });
     });
+
     var gender = reads.groupBy(byCheckpointGender, itemIdentity, compareByCheckpointGender).selectMany(function (group) {
         return group.map(function (item) {
-            return { "name": group.key.gender + " Checkpoint " + group.key.checkpoint, "item": item };
+            var impl = new GroupedRead(group.key.gender + " Checkpoint " + group.key.checkpoint, item);
+            return impl;
         });
     });
+
     var genderAge = reads.groupBy(byCheckpointGenderAge, itemIdentity, compareByCheckpointGenderAge).selectMany(function (group) {
         return group.map(function (item) {
-            return {
-                "name": group.key.gender + " " + group.key.age + " Checkpoint " + group.key.checkpoint,
-                "item": item
-            };
+            var impl = new GroupedRead(group.key.gender + " " + ageRange(group.key) + " Checkpoint " + group.key.checkpoint, item);
+            return impl;
         });
     });
+
     return overall.merge(gender).merge(genderAge);
 }
+
 function toReadType(line) {
-    return JSON.parse(line);
+    var data = JSON.parse(line);
+
+    return new SimpleRead(data.bib, data.checkpoint, data.gender, data.age, data.time);
 }
+
 function stream(lines) {
-    var reads = lines.map(toReadType).publish().refCount();
+    var map = lines.map(toReadType);
+
+    var reads = map.distinctUntilChanged().publish().refCount();
+
     return groupReads(reads).map(toOutputType);
 }
+
 function main() {
     var lines = getInput();
+
     var subscription = stream(lines).subscribe(function (x) {
-        process.stdout.write(JSON.stringify(x) + '\n');
+        process.stdout.write(JSON.stringify(x) + '\r\n');
     });
 }
+
 main();
 //# sourceMappingURL=main.js.map

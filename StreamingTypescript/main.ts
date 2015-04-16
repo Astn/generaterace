@@ -12,7 +12,7 @@ Rx1.Node = require('rx-node');
 
 var fixNewLine = new RegExp("(\r)?\n");
 
-interface ISimpleRead {
+interface SimpleRead {
     bib: number;
     checkpoint: number;
     gender: string;
@@ -20,7 +20,7 @@ interface ISimpleRead {
     time: string;
 }
 
-class SimpleRead implements ISimpleRead {
+class SimpleReadImpl implements SimpleRead {
     constructor(public bib: number, public checkpoint: number, public gender: string, public age: number, public time: string) {
 
     }
@@ -30,30 +30,30 @@ interface IAged {
     age: number;
 }
 
-interface IGroupedRead {
+interface GroupedRead {
     name: string;
-    item: ISimpleRead;
+    item: SimpleRead;
 }
-class GroupedRead implements IGroupedRead {
-    constructor(public name: string, public item: ISimpleRead) {
+class GroupedReadImpl implements GroupedRead {
+    constructor(public name: string, public item: SimpleRead) {
 
     }
 }
 
-interface IGroupedOutput {
+interface GroupedOutput {
     groupName: string;
     bib: number;
     time: string;
     age: number;
 }
-class GroupedOutput implements IGroupedOutput {
+class GroupedOutputImpl implements GroupedOutput {
     constructor(public groupName: string, public bib: number, public time: string, public age: number) {
 
     }
 }
 
-function toOutputType(item: IGroupedRead): IGroupedOutput {
-    return new GroupedOutput(item.name, item.item.bib, item.item.time, item.item.age);
+function toOutputType(item: GroupedRead): GroupedOutput {
+    return new GroupedOutputImpl(item.name, item.item.bib, item.item.time, item.item.age);
 }
 
 function ageRange(item: IAged) {
@@ -61,16 +61,16 @@ function ageRange(item: IAged) {
     return (item.age * 5 - 2) + "-" + ((item.age + 1) * 5 - 2);
 }
 
-function itemIdentity(e: ISimpleRead) {
+function itemIdentity(e: SimpleRead) {
     return e;
 }
-function byCheckpoint(item: ISimpleRead) {
+function byCheckpoint(item: SimpleRead) {
     return item.checkpoint;
 }
-function byCheckpointGender(item: ISimpleRead) {
+function byCheckpointGender(item: SimpleRead) {
     return { "checkpoint": item.checkpoint, "gender": item.gender };
 }
-function byCheckpointGenderAge(item: ISimpleRead) {
+function byCheckpointGenderAge(item: SimpleRead) {
     return { "checkpoint": item.checkpoint, "gender": item.gender, "age": Math.floor((item.age + 2) / 5) };
 }
 
@@ -104,41 +104,41 @@ function getInput(): Rx.Observable<string> {
     }
 }
 
-function groupReads(reads: Rx.Observable<ISimpleRead>): Rx.Observable<IGroupedRead> {
+function groupReads(reads: Rx.Observable<SimpleRead>): Rx.Observable<GroupedRead> {
 
     var overall = reads.groupBy(byCheckpoint)
         .selectMany(group => group.map(item => {
-            var impl: IGroupedRead = new GroupedRead("Overall Checkpoint " + group.key, item);
+            var impl: GroupedRead = new GroupedReadImpl("Overall Checkpoint " + group.key, item);
             return impl;
         }));
 
     var gender = reads.groupBy(byCheckpointGender, itemIdentity, compareByCheckpointGender)
         .selectMany(group => group.map(item => {
-            var impl: IGroupedRead = new GroupedRead(group.key.gender + " Checkpoint " + group.key.checkpoint, item);
+            var impl: GroupedRead = new GroupedReadImpl(group.key.gender + " Checkpoint " + group.key.checkpoint, item);
             return impl;
         }));
 
     var genderAge = reads.groupBy(byCheckpointGenderAge, itemIdentity, compareByCheckpointGenderAge)
         .selectMany(group => group.map(item => {
-            var impl: IGroupedRead = new GroupedRead(group.key.gender + " " + ageRange(group.key) + " Checkpoint " + group.key.checkpoint, item);
+            var impl: GroupedRead = new GroupedReadImpl(group.key.gender + " " + ageRange(group.key) + " Checkpoint " + group.key.checkpoint, item);
             return impl;
         }));
 
     return overall.merge(gender).merge(genderAge);
 }
 
-function toReadType(line: string): ISimpleRead {
+function toReadType(line: string): SimpleRead {
 
     var data = JSON.parse(line);
 
-    return new SimpleRead(data.bib, data.checkpoint, data.gender, data.age, data.time);
+    return new SimpleReadImpl(data.bib, data.checkpoint, data.gender, data.age, data.time);
 }
 
-function stream(lines: Rx.Observable<string>): Rx.Observable<IGroupedOutput> {
+function stream(lines: Rx.Observable<string>): Rx.Observable<GroupedOutput> {
 
     var map: any = lines.map(toReadType);
 
-    var reads: Rx.Observable<ISimpleRead> = map
+    var reads: Rx.Observable<SimpleRead> = map
         .distinctUntilChanged()
         .publish()
         .refCount();

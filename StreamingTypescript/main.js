@@ -9,37 +9,37 @@ Rx1.Node = require('rx-node');
 
 var fixNewLine = new RegExp("(\r)?\n");
 
-var SimpleRead = (function () {
-    function SimpleRead(bib, checkpoint, gender, age, time) {
+var SimpleReadImpl = (function () {
+    function SimpleReadImpl(bib, checkpoint, gender, age, time) {
         this.bib = bib;
         this.checkpoint = checkpoint;
         this.gender = gender;
         this.age = age;
         this.time = time;
     }
-    return SimpleRead;
+    return SimpleReadImpl;
 })();
 
-var GroupedRead = (function () {
-    function GroupedRead(name, item) {
+var GroupedReadImpl = (function () {
+    function GroupedReadImpl(name, item) {
         this.name = name;
         this.item = item;
     }
-    return GroupedRead;
+    return GroupedReadImpl;
 })();
 
-var GroupedOutput = (function () {
-    function GroupedOutput(groupName, bib, time, age) {
+var GroupedOutputImpl = (function () {
+    function GroupedOutputImpl(groupName, bib, time, age) {
         this.groupName = groupName;
         this.bib = bib;
         this.time = time;
         this.age = age;
     }
-    return GroupedOutput;
+    return GroupedOutputImpl;
 })();
 
 function toOutputType(item) {
-    return new GroupedOutput(item.name, item.item.bib, item.item.time, item.item.age);
+    return new GroupedOutputImpl(item.name, item.item.bib, item.item.time, item.item.age);
 }
 
 function ageRange(item) {
@@ -96,21 +96,21 @@ function getInput() {
 function groupReads(reads) {
     var overall = reads.groupBy(byCheckpoint).selectMany(function (group) {
         return group.map(function (item) {
-            var impl = new GroupedRead("Overall Checkpoint " + group.key, item);
+            var impl = new GroupedReadImpl("Overall Checkpoint " + group.key, item);
             return impl;
         });
     });
 
     var gender = reads.groupBy(byCheckpointGender, itemIdentity, compareByCheckpointGender).selectMany(function (group) {
         return group.map(function (item) {
-            var impl = new GroupedRead(group.key.gender + " Checkpoint " + group.key.checkpoint, item);
+            var impl = new GroupedReadImpl(group.key.gender + " Checkpoint " + group.key.checkpoint, item);
             return impl;
         });
     });
 
     var genderAge = reads.groupBy(byCheckpointGenderAge, itemIdentity, compareByCheckpointGenderAge).selectMany(function (group) {
         return group.map(function (item) {
-            var impl = new GroupedRead(group.key.gender + " " + ageRange(group.key) + " Checkpoint " + group.key.checkpoint, item);
+            var impl = new GroupedReadImpl(group.key.gender + " " + ageRange(group.key) + " Checkpoint " + group.key.checkpoint, item);
             return impl;
         });
     });
@@ -121,7 +121,7 @@ function groupReads(reads) {
 function toReadType(line) {
     var data = JSON.parse(line);
 
-    return new SimpleRead(data.bib, data.checkpoint, data.gender, data.age, data.time);
+    return new SimpleReadImpl(data.bib, data.checkpoint, data.gender, data.age, data.time);
 }
 
 function stream(lines) {

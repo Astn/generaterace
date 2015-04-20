@@ -127,3 +127,8 @@ tests/fsharpqa/Source/CodeGen/EmittedIL/ComputationExpressions/ComputationExprLi
 packages
 FSharp.Core.Nuget/*.nupkg
 data
+
+
+*.log
+node_modules/
+.idea/

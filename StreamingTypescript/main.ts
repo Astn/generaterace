@@ -7,8 +7,8 @@
 
 var fileinput = require('fileinput');
 var fs = require('fs');
-var Rx1 = require('rx');
-Rx1.Node = require('rx-node');
+var rx = require('rx');
+rx.Node = require('rx-node');
 
 var fixNewLine = new RegExp("(\r)?\n");
 
@@ -88,11 +88,11 @@ function getInput(): Rx.Observable<string> {
 
     if (process.argv.length > 2) {
         var input: Node = fileinput.input();
-        var observable = Rx1.Observable.fromEvent(input, 'line');
+        var observable = rx.Observable.fromEvent(input, 'line');
         var map = observable.map(line => line.toString().replace(fixNewLine, ""));
         return map;
     } else {
-        return Rx1.Node.fromReadableStream(process.stdin)
+        return rx.Node.fromReadableStream(process.stdin)
             .selectMany(line => line.toString().split(fixNewLine))
             .windowWithCount(2, 1)
             .selectMany(l => l.reduce((acc, x) => {
